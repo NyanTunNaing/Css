@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav--container{
+    position: relative;
+    width: 400px;
+    height: 50px;
+    display: flex;
+}
+
+.nav--container > a{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.outline--animation{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.8s;
+}
+
+.start{
+    width: 100px;
+    height: 2px;
+    background-color: #f4c613;
+}
+
+.start,
+.nav--container a:nth-child(1):hover~.outline--animation{
+    left: 0;
+}
+
+.start,
+.nav--container a:nth-child(2):hover~.outline--animation{
+    left: 100px;
+}
+
+.start,
+.nav--container a:nth-child(3):hover~.outline--animation{
+    left: 200px;
+}
+
+.start,
+.nav--container a:nth-child(4):hover~.outline--animation{
+    left: 300px;
+}
